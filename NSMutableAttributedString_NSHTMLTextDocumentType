@@ -1,0 +1,25 @@
+iOS 8+, supported HTML tags by NSMutableAttributedString using NSHTMLTextDocumentType
+
+Titles: from H1 to H6
+Text alignment: left, right, center, justified
+Style: normal, bold, italic, underline, strikethrough, apex, subscript
+Special tags: code
+Lists: unordered, ordered
+
+Here's a commodity function to set global font style:
+
+- (NSString *)styledHTMLwithHTML:(NSString *)HTML {
+    NSString *style = @"<meta charset=\"UTF-8\"><style> body { font-family: 'HelveticaNeue-Light'; font-size: 14px; } b {font-family: 'HelveticaNeue-Light'; }</style>";
+    
+    return [NSString stringWithFormat:@"%@%@", style, HTML];
+}
+
+Example:
+
+NSString *htmlBaseString = @"<p>This is a <bold>sample</bold> string</p>";
+NSString *styledHTMLString = [myObj styledHTMLwithHTML:htmlBaseString];
+
+/* Then use it in NSMutableAttributedString */
+
+Code References for this notes:
+https://github.com/stanleyhlng/ios_facebook_notifications/blob/master/ios_facebook_notifications/NSString%2BStyledHTMLWithHTML.m
