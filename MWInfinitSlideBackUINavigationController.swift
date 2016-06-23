@@ -51,8 +51,8 @@ class MWInfinitSlideBackUINavigationController: UINavigationController {
         
         guard poppedVC != nil else { return poppedVC }
         
-        let lastPosition = 1 //self.viewControllers.count - 1
-        self.viewControllers.insert(poppedVC!, atIndex: lastPosition)
+        let position = 1
+        self.viewControllers.insert(poppedVC!, atIndex: position)
         
         return poppedVC
     }
@@ -62,8 +62,8 @@ class MWInfinitSlideBackUINavigationController: UINavigationController {
         
         guard poppedVCs != nil else { return poppedVCs }
         
-        let lastPosition = 1 //self.viewControllers.count - 1
-        self.viewControllers.insert(poppedVCs!, atIndex: lastPosition)
+        let position = 1
+        self.viewControllers.insert(poppedVCs!, atIndex: position)
         
         return poppedVCs
     }
